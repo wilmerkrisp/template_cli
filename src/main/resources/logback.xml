@@ -1,0 +1,54 @@
+<!-- File: src/main/resources/logback.xml -->
+<configuration>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%-30(%d{HH:mm:ss.SSS} [%thread]) %-5level %logger{32} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>app.log</file>
+        <encoder>
+            <charset>UTF-8</charset>
+            <Pattern>%d %-4relative [%thread] %-5level %logger{35} - %msg%n
+            </Pattern>
+        </encoder>
+    </appender>
+
+
+<!--    &lt;!&ndash; Create new asynchronous Logback appender backed by Reactor RingBufferProcessor. &ndash;&gt;-->
+<!--    <appender name="ASYNC_CONSOLE" class="reactor.logback.AsyncAppender">-->
+<!--        &lt;!&ndash; Backlog size for logging events. Change size if they are picked up slowly.-->
+<!--             Default is 1024 * 1024 &ndash;&gt;-->
+<!--        <backlog>1048576</backlog>-->
+
+<!--        &lt;!&ndash; Caller data is relatively slow, so per default disabled &ndash;&gt;-->
+<!--        <includeCallerData>false</includeCallerData>-->
+
+<!--        &lt;!&ndash; Redirect logging messages to STDOUT &ndash;&gt;-->
+<!--        <appender-ref ref="CONSOLE"/>-->
+
+<!--    </appender>-->
+
+<!--    &lt;!&ndash; Create new asynchronous Logback appender backed by Reactor RingBufferProcessor. &ndash;&gt;-->
+<!--    <appender name="ASYNC_FILE" class="reactor.logback.AsyncAppender">-->
+<!--        &lt;!&ndash; Backlog size for logging events. Change size if they are picked up slowly.-->
+<!--             Default is 1024 * 1024 &ndash;&gt;-->
+<!--        <backlog>1048576</backlog>-->
+
+<!--        &lt;!&ndash; Caller data is relatively slow, so per default disabled &ndash;&gt;-->
+<!--        <includeCallerData>false</includeCallerData>-->
+
+<!--        &lt;!&ndash; Redirect logging messages to STDOUT &ndash;&gt;-->
+
+<!--        <appender-ref ref="FILE"/>-->
+<!--    </appender>-->
+
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
