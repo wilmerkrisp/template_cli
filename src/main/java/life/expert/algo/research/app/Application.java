@@ -74,7 +74,7 @@ import static io.vavr.Patterns.*;                       //switch - case - succes
  * The type App.
  */
 @Slf4j
-public class Application
+public final class Application
 	{
 	
 	
@@ -89,7 +89,11 @@ public class Application
 	
 	private static final String END_MESSAGE_ = bundle_.getString( "endProgram" );
 	
-	
+ 
+	private Application ()
+		{
+		throw new UnsupportedOperationException( "This is the static helper class" );
+		}
 	
 	/**
 	 * Main method
@@ -107,9 +111,9 @@ public class Application
 			// test
 			log( START_MESSAGE_ );
 			
-			print( "Hello world!\n" );
+			print( "Hello world!" );
 			
-			AlgoOne a = AlgoOne.of();
+			var a = AlgoOne.of();
 			a.run();
 			
 			

@@ -23,7 +23,7 @@ import org.openjdk.jmh.annotations.Setup;
 import org.openjdk.jmh.annotations.State;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 import java.util.stream.LongStream;
 
 
@@ -40,7 +40,7 @@ import java.util.stream.LongStream;
 @State( Scope.Thread )
 public class ExperimentData
 	{
-	@Param( { "1000"  } ) long iterations;
+	@Param( { "1000"  } ) public long iterations;
 	
 	
 //	@Param( { "1000" ,
@@ -56,9 +56,7 @@ public class ExperimentData
 	
 	
 	
-	List< String > list = new ArrayList<>();
-	
-	
+	public final Collection<String> collection_ = new ArrayList<>();
 	
 	/**
 	 * Sets up.
@@ -69,9 +67,13 @@ public class ExperimentData
 		LongStream.range( 0 , iterations )
 		          .forEach( ( l ) ->
 		                    {
-		                    list.add( Long.toString( l ) );
+		                    collection_.add( Long.toString( l ) );
 		                    } );
 		}
-		
-		
+	
+	@Override
+	public String toString()
+		{
+		return "ExperimentData{" + "iterations=" + iterations + ", collection_=" + collection_ + '}';
+		}
 	}

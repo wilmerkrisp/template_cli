@@ -304,7 +304,7 @@ testRuntimeClasspath
 	Runtime classpath for running tests.
 */
 
-
+/*
 tasks.create('unzip', Copy) {
     def zipPath = "${buildDir}/distributions/graph-1.0.0.zip"
     println zipPath
@@ -317,7 +317,7 @@ tasks.create('unzip', Copy) {
 
 unzip.dependsOn distZip
 test.dependsOn unzip
-
+*/
 
 repositories {
     mavenCentral()
@@ -347,6 +347,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.0-M1'
     testImplementation 'org.mockito:mockito-core:3.2.0'
     testImplementation 'com.google.truth:truth:1.0'
+    testImplementation 'org.hamcrest:hamcrest-library:2.2'
 
 
     implementation 'org.apache.commons:commons-lang3:3.9'

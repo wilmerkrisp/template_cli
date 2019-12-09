@@ -53,7 +53,7 @@ import static cyclops.control.Trampoline.done;
 
 
 
-//import java.util.List;                                  //usual list
+//import java.util.List;                                  //usual collection_
 //import io.vavr.collection.List;                         //immutable List
 //import com.google.common.collect.*;                     //ImmutableList
 

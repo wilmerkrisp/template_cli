@@ -19,18 +19,11 @@ import org.openjdk.jmh.infra.Blackhole;
 
 
 
-
-
-
-
-
-
-public class AlgoBechmark
+public class AlgoBechmarking
 	{
 	
-	
 	@Benchmark
-	public void algoOne( ExperimentData data ,
+	public  void algoOnee( ExperimentData data ,
 	                     Blackhole hole )
 		{
 		AlgoOne a = AlgoOne.of();
@@ -39,9 +32,8 @@ public class AlgoBechmark
 		}
 	
 	
-	
 	@Benchmark
-	public void algoTwo( ExperimentData data ,
+	public  void algoTwoo( ExperimentData data ,
 	                     Blackhole hole )
 		{
 		AlgoTwo a = AlgoTwo.of();

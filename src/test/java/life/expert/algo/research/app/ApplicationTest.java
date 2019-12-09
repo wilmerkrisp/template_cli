@@ -2,7 +2,12 @@ package life.expert.algo.research.app;
 
 
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
+
 //---------------------------------------------
 //      ___       __        _______   ______
 //     /   \     |  |      /  _____| /  __  \
@@ -14,16 +19,22 @@ import static org.junit.jupiter.api.Assertions.*;
 //               wilmer 2019/12/05
 //---------------------------------------------
 
-import lombok.NonNull;//@NOTNULL
-
-import org.junit.jupiter.api.Test;
-
-
 class ApplicationTest
 	{
 	
 	@Test
 	void mainTest()
 		{
+		String result = "one";
+		assertThat( result , is( "one" ) );
 		}
+	
+ 
+	
+	
+ 
+	
+	
+	
+	
 	}

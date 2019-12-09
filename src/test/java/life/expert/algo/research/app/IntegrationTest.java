@@ -7,6 +7,7 @@ package life.expert.algo.research.app;
 //
 //--------------------------------------------------------------------------------
 
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 
 import java.io.BufferedReader;
@@ -23,7 +24,8 @@ import static life.expert.common.async.LogUtils.*;
 
 public class IntegrationTest
 	{
-	@Test
+	@Ignore
+	//@Test
 	public void integrationTest()
 	throws IOException
 		{

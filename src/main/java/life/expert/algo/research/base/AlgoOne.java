@@ -6,6 +6,7 @@ package life.expert.algo.research.base;//@Header@
 //
 //--------------------------------------------------------------------------------
 
+import life.expert.common.async.ThreadUtils;
 import lombok.NonNull;//@NOTNULL
 
 import lombok.extern.slf4j.Slf4j;
@@ -47,18 +48,20 @@ import static cyclops.control.Trampoline.done;
  * The type Algo one.
  */
 @Slf4j
-public class AlgoOne
+public final class AlgoOne
 	{
+
+	
+	// constant
+	private static final long  SLEEP_TIME = 1L;
+	
+	
 	private AlgoOne()
 		{
 		
 		}
 	
-	/**
-	 * Of algo one.
-	 *
-	 * @return the algo one
-	 */
+	
 	public static AlgoOne of()
 		{
 		return new AlgoOne();
@@ -69,15 +72,8 @@ public class AlgoOne
 	 */
 	public void run()
 		{
-		try
-			{
-			Thread.sleep( 100 );
-			}
-		catch( final InterruptedException p_exception )
-			{
-			logAtError( "Sleep interrupted" );
-			}
-		return;
+		ThreadUtils.delay( SLEEP_TIME );
+		
 		}
 		
 	}

@@ -36,23 +36,23 @@ class AppTest
 	
 	
 	
-	@BeforeEach
-	void setUp()
-		{
-		}
-	
-	
-	
-	@AfterEach
-	void tearDown()
-		{
-		}
-	
-	
-	
-	@Test
-	void mainn()
-		{
-		
-		}
+//	@BeforeEach
+//	void setUp()
+//		{
+//		}
+//
+//
+//
+//	@AfterEach
+//	void tearDown()
+//		{
+//		}
+//
+//
+//
+//	@Test
+//	void mainn()
+//		{
+//
+//		}
 	}
